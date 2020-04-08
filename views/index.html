@@ -5,144 +5,20 @@
 
     <title>Casa Criativa</title>     
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,400,600,700,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="https://image.flaticon.com/icons/svg/609/609803.svg">
+    {% include "header.html" %}
     
 
 </head>
 
 <body>
-    
     <div id="container">
-
-        <sction id="intro">
-
-            <header>
-                <a href="/">
-                    <img src="Logo.png">
-                </a>
-                
-            </header>
-
-            <main>
-
-                <p>
-                    FIcar em casa em periodos longos, não deve ser nada fácil. 
-                </p>
-    
-                <p>
-                    Por isso iremos catalogar ídeias, <strong>brincadeiras, jogos, filmes, 
-                    livros, cursos, dicase</strong> tudo que for necessario para tomar esse 
-                    momento mais interessante.
-                </p>
-    
-                <p>
-                    Começe clicando em ver ideias para ver as 
-                    ideias cadastradas e contribua adicionando a sua ideia.
-                </p>
-
-            </main>
-
-            <section id="button">
-
-                <button onclick="onOff()">+ Adicionar Ideia</button>
-                <a href="/ideias" class="button">ver ideias</a>
-
-            </section>
-
-            <footer id="footer">
-                
-                <strong>Com Amor</strong> <a href="https://www.facebook.com/matheus.peixe.3/" target="blank">Matheus Peixe</a>
-            </footer>
-
-            
-        
-        </sction>
-
-        <section id="last-ideias">
-
-        {% for idea in ideas %}
-
-            <div class="idea">
-                <img src="{{idea.img}}" 
-                alt="imagen de curso de programação">
-
-                <div class="content">
-
-                    <h3>{{ idea.title }}</h3>
-                    <p>{{ idea.category }}</p>
-                    <div class="description"> {{ idea.description }} </div>
-                    <a href=" {{ idea.url}} " target="_blank" class="" > Link </a>
-                </div>
-            </div>
-
-        {% endfor %}
-
-        </section>
-
+        {% include "header_corpo-index.html" %}
     </div>
 
-    <!-- Modal -->
-
-    <div id="modal" class="hide">
-        <div class="content">
-            <h1>Nova Ideia</h1>
-            <div class="close" onclick="onOff()">
-                <img class="icon_fechar" src="https://image.flaticon.com/icons/svg/1828/1828665.svg">
-            </div>
-
-            <form action="">
-            
-                <div class="input-wrapper">
-                    <label for="title">Título da Ideia</label>
-                    <input type="text" name="title">
-                </div>
-            
-                <div class="input-wrapper">
-                    <label for="category">Categoria</label>
-                    <input type="text" name="category">
-                </div>
-            
-                <div class="input-wrapper">
-                    <label for="image">Link da imagem</label>
-                    <input type="text" name="image">
-                </div>
-            
-                <div class="input-wrapper">
-                    <label for="description">Digite uma descrição para essa ideia</label>
-                    <textarea name="description" cols="30" rows="10"></textarea>
-                </div>
-            
-                <div class="input-wrapper">
-                    <label for="link">Link da ideia</label>
-                    <input type="text" name="link">
-                </div>
-                <button>Salvar</button>
-            </form>
-        </div>
-    </div>
+    {% include "modal.html" %}
 
     <script src="./script.js"></script>
 
-    <div class="media-icons-container">
-        <a href="https://www.facebook.com/matheus.peixe.3/" target="_blank">
-            <img class="media-icon" src="https://image.flaticon.com/icons/svg/220/220342.svg">
-        </a>
-    
-        <a href="https://www.instagram.com/matheus_pece/">
-            <img class="media-icon" src="https://image.flaticon.com/icons/svg/1077/1077042.svg">
-        </a>
-    
-        <a href="https://github.com/MatheusPeixe">
-            <img class="media-icon" src="https://image.flaticon.com/icons/svg/1051/1051377.svg">
-    
-        </a>
-    
-        <a href="https://www.linkedin.com/in/matheus-peixe/">
-            <img class="media-icon" src="https://image.flaticon.com/icons/svg/408/408805.svg">
-        </a>
-    </div>
-</body>
+    {% include "footer.html" %}
 
-</html>
+</body>  </html>

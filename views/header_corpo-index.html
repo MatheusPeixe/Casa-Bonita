@@ -1,0 +1,29 @@
+<sction id="intro">
+
+    <header>
+        <a href="/">
+            <img src="Logo.png">
+        </a>
+        
+    </header>
+
+    {% include "text.html" %}
+
+    <section id="button">
+
+        <button onclick="onOff()">+ Adicionar Ideia</button>
+        <a href="/ideias" class="button">ver ideias</a>
+
+    </section>
+
+    {% include "footer_container.html" %}
+
+</sction>
+
+<section id="last-ideias">
+
+{% for idea in ideas %}
+        {% include "allideias.html" %}
+{% endfor %}
+
+</section>

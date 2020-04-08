@@ -3,88 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Casa Criativa</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,400,600,700,900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="https://image.flaticon.com/icons/svg/609/609803.svg">
-    <link rel="stylesheet" href="./style.css">
+    {% include "header.html" %}
 <body id="pages-ideas">
     
     <div id="container">
-
-        <header>
-            <a href="/"> <img src="/Logo.png"> </a>
-            <nav>
-                <li><a href="/" >Inicio</a></li>
-                <li><a href="#" onclick="onOff()">Novas Ideias</a></li>
-            </nav>
-        </header>
-
-        <section id="title">
-            <p class="teste" >em exibição</p>
-            <h1 class="teste">ideias</h1>
-        </section>
-
-        <main>
-            <section id="ideias">
-                {% for idea in ideas %}
-                    <div class="idea">
-                        <img src="{{idea.img}}" 
-                        alt="imagen de curso de programação">
-                        <div class="content">
-                            <h3>{{ idea.title }}</h3>
-                            <p>{{ idea.category }}</p>
-                            <div class="description"> {{ idea.description }} </div>
-                            <a href=" {{ idea.url}} " target="_blank" class="button_idea" > Link </a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </section>
-        </main>
-        <footer>
-            <strong>Com Amor</strong>  <a href="https://www.facebook.com/matheus.peixe.3/" target="blank">Matheus Peixe</a>
-        </footer>
+        {% include "header_corpo-ideias.html" %}
     </div>
 
-    <!-- Modal -->
-
-    <div id="modal" class="hide">
-        <div class="content">
-            <h1>Nova Ideia</h1>
-            <div class="close" onclick="onOff()">
-                <img class="icon_fechar" src="https://image.flaticon.com/icons/svg/1828/1828665.svg">
-            </div>
-
-            <form action="">
-            
-                <div class="input-wrapper">
-                    <label for="title">Título da Ideia</label>
-                    <input type="text" name="title">
-                </div>
-            
-                <div class="input-wrapper">
-                    <label for="category">Categoria</label>
-                    <input type="text" name="category">
-                </div>
-            
-                <div class="input-wrapper">
-                    <label for="image">Link da imagem</label>
-                    <input type="text" name="image">
-                </div>
-            
-                <div class="input-wrapper">
-                    <label for="description">Digite uma descrição para essa ideia</label>
-                    <textarea name="description" cols="30" rows="10"></textarea>
-                </div>
-            
-                <div class="input-wrapper">
-                    <label for="link">Link da ideia</label>
-                    <input type="text" name="link">
-                </div>
-                
-                <button>Salvar</button>
-            </form>
-        </div>
-
-    </div>
+    {% include "modal.html" %}
 
     <script src="./script.js"></script>
 

@@ -1,0 +1,25 @@
+<header>
+    <a href="/"> <img src="/Logo.png"> </a>
+    <nav>
+        <li><a href="/" >Inicio</a></li>
+        <li><a href="#" onclick="onOff()">Novas Ideias</a></li>
+    </nav>
+</header>
+
+<section id="title">
+    <p class="teste" >em exibição</p>
+    <h1 class="teste">ideias</h1>
+</section>
+
+<main>
+    <section id="ideias">
+        {% for idea in ideas %}
+
+            {% include "allideias.html" %}
+
+        {% endfor %}
+    </section>
+</main>
+<footer>
+    <strong>Com Amor</strong>  <a href="https://www.facebook.com/matheus.peixe.3/" target="blank">Matheus Peixe</a>
+</footer>
