@@ -1,6 +1,6 @@
-#CASA BONITA
+#CASA BONITA 
 
-Aplicação desenvolvida na semana Omnistack 11 da Rosketseat, utilizando Html5, Css3, JavaScript & nodeJs
+Aplicação desenvolvida na semana Omnistack 11 da Rosketseat.
 
     Lingagens Usadas
         - Html 5
