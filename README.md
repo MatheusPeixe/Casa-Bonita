@@ -10,6 +10,8 @@ Aplicação desenvolvida na semana Omnistack 11 da Rosketseat, utilizando Html5,
         - Nunjucks
         - SqLite
 
+    -npm instal = Para adicionar as dependencias do projeto...
+
 Passo a Passo para Executar:
 
     . Inicial Servidor
@@ -17,3 +19,4 @@ Passo a Passo para Executar:
             ou 
         -npm start   
     . Parar servidor ( Ctrl + c)
+
