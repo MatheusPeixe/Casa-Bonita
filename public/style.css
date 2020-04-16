@@ -364,5 +364,16 @@ footer {
     width: 100%;
 }
 
+.idea {
+    position: relative;
+}
+
+.icon_delete{
+    zoom: 45%;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
 
 

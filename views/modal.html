@@ -5,8 +5,8 @@
             <img class="icon_fechar" src="https://image.flaticon.com/icons/svg/1828/1828665.svg">
         </div>
 
-        <form action="">
-        
+        <form action="/" method="POST" onsubmit="return checkFields(event)">
+
             <div class="input-wrapper">
                 <label for="title">Título da Ideia</label>
                 <input type="text" name="title">
@@ -32,7 +32,7 @@
                 <input type="text" name="link">
             </div>
             
-            <button>Salvar</button>
+            <button type="submit">Salvar</button>
         </form>
     </div>
 

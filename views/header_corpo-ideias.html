@@ -14,9 +14,9 @@
 <main>
     <section id="ideias">
         {% for idea in ideas %}
-
-            {% include "allideias.html" %}
-
+            <div id="{{idea.id}}">
+                {% include "allideias.html" %}
+            </div>
         {% endfor %}
     </section>
 </main>
